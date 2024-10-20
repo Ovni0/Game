@@ -1,0 +1,127 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    font-family: 'Arial', sans-serif; /* Añadir una fuente más limpia */
+    background-color: #222; /* Cambiar el color de fondo general */
+}
+
+#gameArea {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-color: #333;
+    border: 5px solid #444; /* Añadir un borde alrededor del área del juego */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Sombra para darle profundidad */
+}
+
+#character, #monster {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 5px; /* Bordes redondeados para los personajes */
+}
+
+#character {
+    background-color: #007BFF; /* Azul más brillante */
+    transition: left 0.1s, top 0.1s;
+}
+
+#monster {
+    background-color: #FF4136; /* Rojo más intenso */
+    top: 50vh;
+    left: 50vw;
+    border: 2px solid #900; /* Borde más oscuro para el monstruo */
+}
+
+.magic {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #FFD700; /* Amarillo dorado */
+    border-radius: 50%;
+    transition: left 0.1s, top 0.1s;
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.5); /* Sombra para el efecto de magia */
+}
+
+#dashCooldownBar {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 10px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Sombra para la barra de cooldown */
+}
+
+#dashCooldownFill {
+    height: 100%;
+    background-color: #007BFF; /* Azul más brillante para la barra de cooldown */
+    transition: width 0.1s ease; /* Transición suave al cambiar el ancho */
+}
+
+.health-bar {
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 10px;
+    background-color: rgba(255, 0, 0, 0.3);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.health-bar-fill {
+    height: 100%;
+    background-color: red;
+    transition: width 0.2s ease; /* Transición suave al cambiar el ancho */
+}
+
+.hidden {
+    display: none;
+}
+
+#menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 24px; /* Tamaño de fuente más grande para el menú */
+}
+
+#startButton {
+    padding: 10px 20px;
+    font-size: 20px;
+    margin-top: 20px;
+    cursor: pointer;
+    background-color: #007BFF; /* Color de fondo azul para el botón */
+    border: none; /* Eliminar el borde por defecto */
+    border-radius: 5px; /* Bordes redondeados para el botón */
+    color: white; /* Texto blanco */
+    transition: background-color 0.3s; /* Transición suave al cambiar el color */
+}
+
+#startButton:hover {
+    background-color: #0056b3; /* Cambia a un azul más oscuro al pasar el mouse */
+}
+
+.follower {
+    position: absolute;
+    width: 20px; /* Cambiar tamaño según preferencia */
+    height: 20px; /* Cambiar tamaño según preferencia */
+    background-color: green; /* Color verde para las bolas */
+    border-radius: 0; /* Cuadradas */
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.5); /* Efecto de brillo */
+    transition: left 0.1s, top 0.1s; /* Transición suave */
+}
